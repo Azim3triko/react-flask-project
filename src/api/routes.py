@@ -16,3 +16,19 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+@api.route("/users", methods=["POST"])
+def handle_users():
+    body = request.json
+    email=body.get('email',None)
+    password=body.get('password',None)
+    if email is None or password is None: return jsonify(
+        "revise el payload de su solicitud..."
+    ), 400
+    new_user=User(email,password)
+    return jsonify(new_user.serialize()), 201
+
+# @/api/tokens (log-in)
+
+# @/api/finanzas
+# @jwt_required
