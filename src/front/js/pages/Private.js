@@ -6,5 +6,5 @@ export const Private = (props) => {
   useEffect(() => {
     actions.private();
   }, [actions.private]);
-  return <h1> {store.private && store.private.email} </h1>;
+  return <h1> {"Bienvenido!"} </h1>;
 };

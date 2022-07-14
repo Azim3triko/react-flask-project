@@ -9,7 +9,6 @@ export const LogIn = (props) => {
   const navigate = useNavigate();
   return (
     <div className="container">
-      <h1> Login</h1>
       <div className="row">
         <form>
           <input
@@ -47,7 +46,7 @@ export const LogIn = (props) => {
           }}
         >
           {" "}
-          {"Login..."}{" "}
+          {"Login"}{" "}
         </button>
       </div>
     </div>
