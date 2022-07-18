@@ -47,9 +47,10 @@ const getState = ({ getStore, getActions, setStore }) => {
             headers: { "Content-Type": "application/json" },
           });
 
-          if (response.status === 400) {
+          if (response.status !== 200) {
             throw "Invalid email or password format";
           }
+
           const data = await response.json();
           localStorage.setItem("jwt-token", data.token);
 
